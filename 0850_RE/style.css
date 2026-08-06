@@ -1,54 +1,120 @@
-body {
-    background-color: #66bcc1;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* 기본 여백·박스모델 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* 색상 토큰 정의 */
+:root {
+    --color-bg: #66bcc1;
+    --color-card: #fff;
+    --color-text: #222;
+    --color-muted: #888;
+    --color-bio: #555;
+    --color-link: #2a8a90;
+    --color-btn: #66bcc1;
+    --color-btn-hover: #559fa3;
+    --color-footer: #999;
+    --color-shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* 페이지 배경색 */
+body {
+    background-color: var(--color-bg);
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+}
+
+/* 프로필 카드 컨테이너 */
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background-color: var(--color-card);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px var(--color-shadow);
     width: 300px;
 }
 
-.card header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+/* 미사용 섹션 숨김 */
+.section1 {
+    display: none;
 }
 
+/* 헤더 프로필 이미지 */
 .card header img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
+    border-radius: 8px;
 }
 
+/* Roboto 가변 폰트 적용 */
+.roboto-heading {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* 이름 타이틀 위계 */
 .card header h1 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
-.card header p {
-    font-size: 16px;
-    color: #666;
+/* 역할 문구 위계 */
+.card header .role {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.6;
 }
 
-.card section2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+/* 소개(bio) 문구 위계 */
+.section2 p {
+    font-size: 15px;
+    color: var(--color-bio);
+    line-height: 1.6;
 }
 
-.card section2 p {
-    font-size: 16px;
-    color: #666;
+/* 링크 목록 기본 스타일 제거 */
+.links ul {
+    list-style: none;
 }
 
+/* 네비게이션 링크 색상 */
+.links a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 링크 호버 시 밑줄 */
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Contact 버튼 */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-btn);
+    color: var(--color-card);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 버튼 호버 상태 */
+.btn:hover {
+    background-color: var(--color-btn-hover);
+}
+
+/* 저작권 푸터 */
+footer {
+    font-size: 12px;
+    color: var(--color-footer);
+}
