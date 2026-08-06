@@ -1,8 +1,54 @@
 body {
-    background-color: #c5c5ec;
+    background-color: #66bcc1;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.card header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.card section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card section2 p {
+    font-size: 16px;
+    color: #666;
+}
+
