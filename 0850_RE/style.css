@@ -61,8 +61,10 @@ body {
 
 }
 
-.modal{
-    display: none;
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,17 +72,31 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal.is-open{
-    display : flex;
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.modal_box{
+.modal_box {
     background-color: var(--color-card);
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 8px 24px var(--color-shadow);
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.is-open .modal_box {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 /* 미사용 섹션 숨김 */
