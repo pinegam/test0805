@@ -2,12 +2,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 /* 색상 토큰 정의 */
 :root {
-    --color-bg: #66bcc1;
+    --color-bg: #5fc9cf;
     --color-card: #fff;
     --color-text: #222;
     --color-muted: #888;
@@ -19,20 +19,25 @@
     --color-shadow: rgba(0, 0, 0, 0.08);
 }
 
-/* 페이지 배경색 */
+/* 페이지 배경색 · 카드를 화면 정중앙에 배치 */
 body {
     background-color: var(--color-bg);
     font-family: Arial, sans-serif;
     color: var(--color-text);
+    display: flex; /* flex 컨테이너로 전환 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    min-height: 100vh; /* 뷰포트 높이 확보 */
 }
 
 /* 프로필 카드 컨테이너 */
 .card {
     background-color: var(--color-card);
-    padding: 40px;
-    border-radius: 24px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 16px;
     box-shadow: 0 8px 24px var(--color-shadow);
-    width: 300px;
 }
 
 /* 미사용 섹션 숨김 */
@@ -44,7 +49,8 @@ body {
 .card header img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 1.5;
+    margin-bottom: 20px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -59,9 +65,11 @@ body {
 
 /* 이름 타이틀 위계 */
 .card header h1 {
-    font-size: 30px;
+    font-size: 33px;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /* 역할 문구 위계 */
@@ -81,6 +89,10 @@ body {
 /* 링크 목록 기본 스타일 제거 */
 .links ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 /* 네비게이션 링크 색상 */
