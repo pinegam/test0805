@@ -17,6 +17,7 @@
     --color-btn-hover: #559fa3;
     --color-footer: #999;
     --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-selection: #b3e8eb;
 }
 
 /* 페이지 배경색 · 카드를 화면 정중앙에 배치 */
@@ -30,6 +31,24 @@ body {
     min-height: 100vh; /* 뷰포트 높이 확보 */
 }
 
+/* 글자 드래그 선택색 */
+::selection {
+    background-color: var(--color-selection);
+    color: var(--color-text);
+}
+
+/* 카드 등장 애니메이션 */
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 6;
+        transform: translateY(0);
+    }
+}
+
 /* 프로필 카드 컨테이너 */
 .card {
     background-color: var(--color-card);
@@ -38,6 +57,7 @@ body {
     max-width: 300px;
     border-radius: 16px;
     box-shadow: 0 8px 24px var(--color-shadow);
+    animation: card-enter 0.6s ease-out;
 }
 
 /* 미사용 섹션 숨김 */
@@ -45,14 +65,14 @@ body {
     display: none;
 }
 
-/* 헤더 프로필 이미지 */
+/* 헤더 프로필 이미지 · 원형 */
 .card header img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1.5;
-    margin-bottom: 20px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 /* Roboto 가변 폰트 적용 */
@@ -95,16 +115,17 @@ body {
     margin-top: 20px;
 }
 
-/* 네비게이션 링크 색상 */
+/* 네비게이션 링크 색상 · 밑줄 제거 */
 .links a {
     color: var(--color-link);
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.2s ease;
 }
 
-/* 링크 호버 시 밑줄 */
+/* 링크 호버 시 색 변환 */
 .links a:hover {
-    text-decoration: underline;
+    color: var(--color-btn-hover);
 }
 
 /* Contact 버튼 */
@@ -115,14 +136,20 @@ body {
     border-radius: 6px;
     background-color: var(--color-btn);
     color: var(--color-card);
+    font-family: inherit;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 /* 버튼 호버 상태 */
 .btn:hover {
     background-color: var(--color-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 /* 저작권 푸터 */
