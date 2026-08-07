@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <script src="script.js"></script>
     <main class="card">
         <section class="section1"></section>
 
@@ -31,9 +30,19 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <button class="btn" id="contact-me" onclick="alert('this is my number');">Contact me</button>
+        <button class="btn" id="contactBtn">Contact me</button>
         <footer>copyright 2026 박준혁. All rights reserved.</footer>
     </main>
+    <div class="modal" id="modal">
+        <div class="modal_box">
+            <h2>연락처</h2>
+            <p>010-1234-5678</p>
+            <button id="closeBtn">Close</button>
+        </div>
+    </div>   
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
