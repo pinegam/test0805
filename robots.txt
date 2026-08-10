@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://heroic-moonbeam-6fea55.netlify.app/sitemap.xml
+Sitemap: https://dgu222namecard.netlify.app/sitemap.xml
