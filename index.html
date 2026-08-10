@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박준혁</title>
+
+    <!-- 기본 SEO -->
+    <title>박준혁 | 동국대 바이브 코딩 · 불편함을 서비스로 바꾸는 사람</title>
+    <meta name="description" content="박준혁 — 동국대 바이브 코딩 부트캠프. 불편함을 서비스로 바꾸는 개발자입니다.">
+    <meta name="keywords" content="박준혁, 바이브 코딩, 동국대, 웹 개발, 프론트엔드">
+    <meta name="author" content="박준혁">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://heechan-seo.netlify.app/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <!-- Open Graph (카카오·슬랙·페이스북 등) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="박준혁">
+    <meta property="og:title" content="박준혁 • 바이브 미">
+    <meta property="og:description" content="불편함을 서비스로 바꾸는 사람">
+    <meta property="og:url" content="https://heechan-seo.netlify.app/">
+    <meta property="og:image" content="https://heechan-seo.netlify.app/og.png">
+    <meta property="og:image:alt" content="박준혁 프로필 카드">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="박준혁 • 바이브 미">
+    <meta name="twitter:description" content="불편함을 서비스로 바꾸는 사람">
+    <meta name="twitter:image" content="https://heechan-seo.netlify.app/og.png">
+
+    <!-- 구조화 데이터 (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "박준혁",
+        "url": "https://heechan-seo.netlify.app/",
+        "image": "https://heechan-seo.netlify.app/images.jpeg",
+        "jobTitle": "바이브 코딩 부트캠프 수강생",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "동국대학교"
+        },
+        "description": "불편함을 서비스로 바꾸는 사람",
+        "email": "mail@example.com"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
-
-    <meta property="og:title" content="박준혁 • 바이브 미">
-    <meta property="og:description" content="불편함을 서비스로 바꾸는 사람">
-    <meta property="og: image" content="https://heechan-seo.netlify.app/og.png">
-    <meta property="og:url" content="https://heechan-seo.netlify.app">
-    <meta property="og: type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- SNS 공유 카드용 (카톡·슬랙 페북 인스타) -->
-<!-- ‹meta property="og:title"
-content="서희찬 • 바이브 미 />
-〈meta property="og:description" Content="불편함을 서비스로 바꾸는 사람" />
-‹meta property="og: image"
-content="https://heechan-seo.netlify.app/og.png" />
-‹meta property="og:url"
-content="https://heechan-seo.netlify.app" />
-‹meta property="og: type"
-content="website" /›
-<!-- 트위터/x용 (한 줄 추가) -->
-<!-- ‹meta name="twitter:card" content="summary_large_image" /> --> -->
-
 </head>
 
 <body>
@@ -37,34 +62,31 @@ content="website" /›
         <section class="section1"></section>
 
         <header>
-            <img src="images.jpeg" alt="(no image found)">
+            <img src="images.jpeg" width="120" height="120" alt="박준혁 프로필 사진">
             <h1 class="roboto-heading">박준혁</h1>
             <p class="role">동국대 바이브 코딩 부트캠프</p>
         </header>
 
-        <section class="section2">
-            <p>불편함을 바꾸는 어쩌고 저쩌고</p>
+        <section class="section2" aria-label="소개">
+            <p>불편함을 서비스로 바꾸는 사람</p>
         </section>
-        <nav class="links">
+        <nav class="links" aria-label="연락 링크">
             <ul>
-                <li><a href="https://www.naver.com/">mail@example.com</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="mailto:mail@example.com">mail@example.com</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="btn" id="contactBtn">Contact me</button>
+        <button class="btn" id="contactBtn" type="button" aria-haspopup="dialog">Contact me</button>
         <footer>copyright 2026 박준혁. All rights reserved.</footer>
     </main>
-    <div class="modal" id="modal">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal_box">
-            <h2>연락처</h2>
+            <h2 id="modal-title">연락처</h2>
             <p>010-1234-5678</p>
         </div>
-    </div>   
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
-
-//kk
